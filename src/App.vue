@@ -1,25 +1,41 @@
 <template>
   <div id="app">
-    <TodoList />
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </nav>
+    <router-view />
   </div>
 </template>
 
 <script>
-import TodoList from './components/TodoList.vue';
-
 export default {
-  name: 'App',
-  components: {
-    TodoList
-  }
+  name: "App",
 };
 </script>
 
 <style>
 #app {
-  height: 100vh; /* Take full height of the viewport */
-  display: flex; /* Enable Flexbox */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

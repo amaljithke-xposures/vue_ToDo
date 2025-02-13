@@ -69,7 +69,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .todo-container {
   width: 100%;
   max-width: 500px;

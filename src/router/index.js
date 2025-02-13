@@ -1,18 +1,23 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import TodoList from '../components/TodoList.vue';
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
+import AboutView from "../views/AboutView.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'TodoList',
-    component: TodoList
+    path: "/",
+    name: "Home",
+    component: HomeView,
   },
-  // You can add more routes here if needed
+  {
+    path: "/about",
+    name: "About",
+    component: AboutView,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 });
 
 export default router;
